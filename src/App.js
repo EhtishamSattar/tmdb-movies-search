@@ -1,9 +1,13 @@
 import './App.css';
+import Data from './Components/Data';
 
 function App() {
   return (
     <>
-    here is this going
+    <Data/>
+    <div>
+
+    </div>
     </>
   );
 }
