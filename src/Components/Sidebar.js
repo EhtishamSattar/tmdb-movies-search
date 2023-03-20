@@ -14,7 +14,7 @@ const Sidebar = () => {
                     className={`bg-white border-red-700 h-screen md:block shadow-xl px-3  lg:w-60 xl:w-64 overflow-x-hidden transition-transform duration-300 ease-in-out z-10`}>
                     <div className="space-y-6 md:space-y-10 mt-10">
                         <h1 className="font-bold text-4xl text-center md:hidden">
-                            D<span className="text-teal-600">.</span>
+                            TMDB<span className="text-teal-600 font-mono">.</span>
                         </h1>
                         <h1 className="hidden md:block font-bold text-sm md:text-xl text-center">
                             t m d b<span className="text-teal-600">.</span>
