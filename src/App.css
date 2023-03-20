@@ -24,4 +24,30 @@
   @media (max-width: 911px) {
   }
 
-  
+.bg-image{
+  opacity: 0.8;
+}
+
+@media (min-width:416px) and (max-width: 640px) {
+  .main-text{
+    top:200px;
+    font-size:xx-large;
+    line-height: normal;
+    margin-bottom: 100px;
+  }
+}
+
+@media (min-width:200px) and (max-width: 416px) {
+  .main-text{
+    top:200px;
+    font-size:37px;
+    line-height: 33px;
+    margin-bottom: 100px;
+  }
+}
+
+@media (min-width:200px) and (max-width: 640px) {
+  .movie-cards{
+    display:grid;
+  }
+}

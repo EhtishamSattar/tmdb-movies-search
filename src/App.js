@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Data from './Components/Data';
 import Sidebar from './Components/Sidebar';
 import bg from './Components/images/bg.jpg'
+import Footer from './Components/Footer';
 
 function App() {
   const [isHidden, setIsHidden] = useState(true);
@@ -15,7 +16,7 @@ function App() {
     <>
       <button
         onClick={sidebarVisibility}
-        className="z-30 p-2 m-2 border-2 bg-white rounded-md  shadow-lg text-gray-500 focus:bg-teal-500 focus:outline-none focus:text-white fixed top-0 left-0 "
+        className="z-30 p-2 m-2 border-2 bg-white rounded-md  shadow-lg text-gray-500 hover:bg-teal-200 focus:bg-teal-500 focus:outline-none focus:text-white fixed top-0 left-0 "
       >
         <svg
           className="w-5 h-5 fill-current"
@@ -31,32 +32,31 @@ function App() {
         </svg>
       </button>
 
-      {/* BACKGROUND IMAGE */}
 
-      {/* <div className=''>
-        <img className='h-screen w-screen' src={bg} alt="background-image"></img>
-      </div> */}
-
-      <div className='flex bg-slate-600'>
-        <div className={`${isHidden ? '' : 'basis-1/5'} bg-black`} style={{ display: isHidden ? 'none' : 'block' }}>
+      <div className='flex bg-slate-800'>
+        <div className={`${isHidden ? '' : ''}`} style={{ display: isHidden ? 'none' : 'block' }}>
           <Sidebar />
         </div>
-        <div id="data" className={`${isHidden ? '' : 'basis-4/5 '} relative bottom-40  bg-slate-500`}>
+        <div id="data" className={`${isHidden ? '' : ''} relative bottom-40 `}>
           <div className='flex flex-col'>
-            <div className=''>
-              <img className='h-screen w-screen' src={bg} alt="background-image"></img>
+            <div className='h-screen'>
+              <img className='bg-image h-screen w-screen' src={bg} alt="background-image"></img>
+              <div className='main-text text-white absolute sm:top-56 sm:text-4xl lg:top-60 mt-7 md:top-60  md:text-5xl lg:text-5xl font-extrabold pl-7 pr-1'>
+                  Explore the captivating world of cinema with our vast collection of movies, ranging from timeless classics to the latest blockbusters.
+              </div>
             </div>
-            <div className='my-6 px-6 pt-10 relative bottom-48 z-10'>
+            <div className='my-6 px-6 pt-20 relative bottom-48 z-10'>
+              
               <div
-                className="flex border-2 border-gray-200 rounded-md focus-within:ring-2 ring-teal-500"
+                className="flex bg-white rounded-full w-5/6 h-11 m-auto border-2  focus-within:ring-2 ring-teal-500"
               >
                 <input
                   type="text"
-                  className="w-full rounded-tl-md rounded-bl-md px-2 py-3 text-sm text-gray-600 focus:outline-none"
-                  placeholder="Search"
+                  className="w-full rounded-full px-3 py-3 text-sm text-gray-600 focus:outline-none"
+                  placeholder="Search for a movie "
                 />
                 <button
-                  className="rounded-tr-md rounded-br-md px-2 py-3 hidden md:block bg-gray-400"
+                  className="rounded-full px-3 py-3 hidden md:block bg-gray-400"
                 >
                   <svg
                     className="w-4 h-4 fill-current"
@@ -74,7 +74,7 @@ function App() {
               </div>
 
             </div>
-            <div className={`lg:pl-2 lg:pr-2 xl:pl-2 bg-slate-500 pr-1 relative bottom-20`}>
+            <div className={`lg:pl-2 lg:pr-2 xl:pl-2 pr-1 relative bottom-20`}>
               <Data />
 
             </div>
@@ -82,6 +82,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }

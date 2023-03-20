@@ -1,49 +1,16 @@
 import React, { useState } from 'react'
 
 const Sidebar = () => {
-
-    //let [sidebar, setsidebar] = useState("visible");
-
-    // const sidebarVisibility = ()=> {
-    //     console.log("button clikced")
-    //     if(sidebar==="visible")
-    //     {
-    //         setsidebar("none");
-    //     }else{
-    //         setsidebar("visible");
-    //     }
-        
-    // }
     return (
         <>
         <body className={`font-poppins antialiased fixed z-20`}>
             <div
                 id="view"
-                className="h-full w-screen flex flex-row"
+                className="h-screen w-screen flex flex-row"
                 x-data="{ sidenav: true }">
-                {/* <button
-                    onClick={sidebarVisibility}
-                    className="z-20 p-2 m-2 border-2 bg-white rounded-md  shadow-lg text-gray-500 focus:bg-teal-500 focus:outline-none focus:text-white absolute top-0 left-0 "
-                >
-                    <svg
-                        className="w-5 h-5 fill-current"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            fillRule="evenodd"
-                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                            clipRule="evenodd"
-                        ></path>
-                    </svg>
-                </button> */}
-            
+
                 <div
                     id="sidebar"
-                    // style={{
-                    //     display:sidebar=='visible'?'visible':'none'
-                    // }}
                     className={`bg-white border-red-700 h-screen md:block shadow-xl px-3  lg:w-60 xl:w-64 overflow-x-hidden transition-transform duration-300 ease-in-out z-10`}>
                     <div className="space-y-6 md:space-y-10 mt-10">
                         <h1 className="font-bold text-4xl text-center md:hidden">
